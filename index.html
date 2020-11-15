@@ -105,9 +105,11 @@
         searchButton = document.getElementById("searchButton");
 
         searchButton.addEventListener("click", function() {
+             event.preventDefault();
             var userInput = searchBox.value;
-                window.location.href=('https://www.google.com/search?q=' + userInput);
-
+            
+            var address='https://www.google.com/search?q=' + userInput;
+            window.open (address,'Google');
         });
 
     </script>
